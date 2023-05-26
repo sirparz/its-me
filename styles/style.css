@@ -1,8 +1,112 @@
 body {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Rubik", Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
+li, a, button {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-family: "Space Mono";
+  font-size: 1rem;
+}
+
+h1 {
+  
+}
+
+/* HEADER */
+
 header {
-  height: 4rem;
+  border-bottom: solid rgb(207, 207, 207) 1px;
+  box-shadow:
+    0.3px 1.4px 3.7px rgba(0, 0, 0, 0.02),
+    0.8px 3.4px 8.8px rgba(0, 0, 0, 0.028),
+    1.5px 6.4px 16.5px rgba(0, 0, 0, 0.035),
+    2.7px 11.4px 29.5px rgba(0, 0, 0, 0.042),
+    5px 21.3px 55.1px rgba(0, 0, 0, 0.05),
+    12px 51px 132px rgba(0, 0, 0, 0.07)
+  ;
+  display: flex;
+  /*justify-content: space-around;*/
+  justify-content: flex-end;
+  align-items: center;
+  padding: .7rem 5%;
+  line-height: 1;
+  position: sticky; top: 0;
+  background: white;
+  
+}
+
+.logo {
+  font-size: 3.5rem;
+  cursor: pointer;
+  display: flex;
+  margin-right: auto;
+  /*border: solid red 1px;*/
+}
+
+.logo img {
+  height: 3.5rem;
+}
+
+header .nav-links {
+  list-style: none;
+}
+
+header .nav-links li {
+  display: inline-block;
+  padding: 0 .3rem;
+}
+
+header .nav-links li a {
+  transition: all 0.6s ease 0s;
+  padding: .8rem 1rem;
+}
+
+header .nav-links li a:hover {
+  /*color: #044A5C;*/
+  border-radius: 2px;
+  -webkit-text-decoration: underline wavy #d05454;
+  text-decoration: underline wavy #d05454;
+}
+
+header nav img {
+  /*border: solid red 1px;*/
+  height: 1.6rem;
+  display: none;
+  padding: .8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    
+  }
+
+  .logo {
+    font-size: 3.2rem;
+    cursor: pointer;
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .logo img {
+    height: 3.2rem;
+  }  
+
+  .nav-links {
+    display: none;
+  }
+
+  header nav img {
+    display: flex;
+  }
+  
+}
+
+/* LANDING PAGE */
+#landing {
+  display: flex;
+  height: 600px;
 }
