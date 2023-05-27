@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sir Parz ^_^</title>
+  <title>Faris' Site</title>
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  
   <header>
     <div class="logo">
       <img src="images/logo.png" alt="The Logo">
@@ -41,7 +42,7 @@
     </div>
     <div class="profile-pic">
       <div class="pfp-contain">
-        <img src="images/random-profile-pic.png">
+        <img src="images/random-profile-pic.png" alt="The Profile Picture">
       </div>
     </div>
   </div>
@@ -49,8 +50,22 @@
     <div class="heading-deco">
       <h2>Projects</h2>
     </div>
-    <div class="project">
-      <p>Jammming</p>
+    <div>
+      <div onclick="gitHubLink()" class="project">
+        <img src="images/jammming.png" alt="Jammming Page Sample">
+        <h4>Jammming</h4>
+        <p class="project-status">COMING SOON</p>
+      </div>
+      <div onclick="gitHubLink()" class="project">
+        <img src="images/personal-site.jpg" alt="Illustration of portfolio site.">
+        <h4>Personal Portfolio Site</h4>
+        <p class="project-status">ONGOING</p>
+      </div>
+      <div onclick="gitHubLink('https://github.com/sirparz/alwaha-first');" class="project">
+        <img src="images/alwaha-front.jpg" alt="A swimmer swimming.">
+        <h4>Al Waha Club</h4>
+        <p class="project-status">ONGOING</p>
+      </div>
     </div>
   </div>
   <div id="contact">
@@ -59,5 +74,6 @@
   <footer>
     Made with ❤️ by Faris (c) 2023
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -264,5 +264,34 @@ header nav img {
 }
 
 .project {
-  display: solid red 1px;
+  border: solid rgb(226, 226, 226) 1px;
+  border-radius: 7%;
+  background:rgb(241, 241, 241);
+  width: 20rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin: 2rem;
+
+  -moz-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+
+.project img {
+  width: 80%;
+  border-radius: 10%;
+  pointer-events: none;
+}
+
+.project h4 {
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+
+.project p {
+  font-size: 1rem;
+  font-family: "Space Mono";
+  pointer-events: none;
 }
