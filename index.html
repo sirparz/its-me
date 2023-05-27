@@ -22,9 +22,8 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#landing">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <img src="icons/hamburger-menu.png" alt="The Logo">
@@ -46,11 +45,11 @@
       </div>
     </div>
   </div>
-  <div id="projects">
+  <div id="projects" class="page-section">
     <div class="heading-deco">
       <h2>Projects</h2>
     </div>
-    <div>
+    <div class="project-container">
       <div onclick="gitHubLink()" class="project">
         <img src="images/jammming.png" alt="Jammming Page Sample">
         <h4>Jammming</h4>
@@ -64,15 +63,31 @@
       <div onclick="gitHubLink('https://github.com/sirparz/alwaha-first');" class="project">
         <img src="images/alwaha-front.jpg" alt="A swimmer swimming.">
         <h4>Al Waha Club</h4>
-        <p class="project-status">ONGOING</p>
+        <p class="project-status">COMPLETED</p>
       </div>
+    </div>
+    <div class="flexcenter">
+      <button onclick="location.href = 'https://github.com/sirparz';">See More Projects on GitHub</button>
+    </div>
+  </div>
+  <div id="skills" class="page-section">
+    <div class="heading-deco">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-icon"><img src="icons/html-5.png"></div>
+      <div class="skill-icon"><img src="icons/css-3.png"></div>
+      <div class="skill-icon"><img src="icons/js.png"></div>
+      <div class="skill-icon"><img src="icons/git.png"></div>
+      <div class="skill-icon"><img src="icons/github.png"></div>
+      <div class="skill-icon"><img src="icons/visual-studio.png"></div>
     </div>
   </div>
   <div id="contact">
     Reach Us Here!
   </div>
-  <footer>
-    Made with ❤️ by Faris (c) 2023
+  <footer class="pixelated-scroll">
+    <p>Made with ❤️ by Faris (c) 2023</p>
   </footer>
   <script src="script.js"></script>
 </body>

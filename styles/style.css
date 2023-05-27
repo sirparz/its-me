@@ -13,6 +13,12 @@ li, a, button {
   font-size: 1rem;
 }
 
+.flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-family: "Space Mono";
   font-size: 2.5rem;
@@ -28,9 +34,11 @@ h3 {
   font-family: "Space Mono";
   font-size: 2.5rem;
   font-weight:bolder;
-  margin-bottom:4rem;
+  margin-bottom:3rem;
   display: flex;
-  border: solid red 1px;
+  width: 80%;
+  margin: 0 10%;
+  margin-bottom: 2.5rem;
 }
 
 .heading-deco h2 {
@@ -44,11 +52,23 @@ h3 {
   padding-right: 2rem;
 }
 
+.page-section {
+  max-width: 1280px;
+  width: 90%;
+  padding: 3.5rem 5%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 768px) {
   .heading-deco {
     align-items: center;
     justify-content: center;
     font-size: 2.2rem;
+    margin-bottom:2.5rem;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
   }
 
   .heading-deco h2 {
@@ -56,6 +76,35 @@ h3 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+/*Button Style*/
+
+button {
+  --c:  #d05454; /* the color*/
+  font-size: 1.3rem;
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+button:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
 }
 
 /* HEADER */
@@ -122,10 +171,6 @@ header nav img {
 }
 
 @media only screen and (max-width: 768px) {
-  header {
-    
-  }
-
   .logo {
     font-size: 3.2rem;
     cursor: pointer;
@@ -144,10 +189,11 @@ header nav img {
   header nav img {
     display: flex;
   }
-  
 }
 
+
 /* LANDING PAGE */
+
 #landing {
   max-width: 1280px;
   /*border: solid red 1px;*/
@@ -251,32 +297,32 @@ header nav img {
 
 }
 
+
 /* PROJECTS */
-#projects {
-  max-width: 1280px;
-  /*border: solid red 1px;*/
-  /*below are copied from my al-waha page*/
-  width: 70%;
-  padding: 5rem 15%;
-  justify-content: center;
-  margin: 0 auto;
-  /*grid thingy*/
-}
 
 .project {
   border: solid rgb(226, 226, 226) 1px;
   border-radius: 7%;
   background:rgb(241, 241, 241);
-  width: 20rem;
+  width: 18rem;
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  margin: 2rem;
+  margin: 1.8rem 1rem;
 
   -moz-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   -webkit-transition: all .4s ease-in;
   transition: all .4s ease-in;
+  
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .project img {
@@ -294,4 +340,89 @@ header nav img {
   font-size: 1rem;
   font-family: "Space Mono";
   pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .project {
+    margin: .8rem 1rem;
+    width: 20rem;
+  }
+
+  .project-container {
+    justify-content: center;
+  }
+}
+
+
+/* SKILLS */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.skill-icon {
+  width: 7rem;
+  padding: 1rem;
+  
+}
+
+#skills img {
+  width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+  .skill-icon {
+    width: 6rem;
+    padding: .5rem;
+  }
+}
+
+
+/* HEADER */
+footer {
+  height: 4rem;
+  border-top: solid 2px blueviolet;
+  
+}
+
+footer p {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: .6rem;
+
+  position: relative;
+  /* negative value of footer height */
+  height: 4rem;
+  clear: both;
+  color:#79B2C6;
+}
+
+.pixelated-scroll {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  background-image: url(https://codeshack.io/web/img/uploads/pixelated-buildings.png);
+  background-size: 10%;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  border-bottom: 1rem solid black;
+  box-sizing: border-box;
+  animation: slide 10s linear infinite;
+  background-color: #4f2950;
+  transform: translateY(10rem);
+}
+/*
+@keyframes slide {
+  from { background-position: left bottom; }
+  to { background-position: 100% bottom; }
+}*/
+
+@media only screen and (max-width: 768px) {
+  .pixelated-scroll {
+    background-size: 20%;
+  }
 }
