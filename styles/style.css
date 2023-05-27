@@ -1,7 +1,8 @@
 body {
   font-size: 20px;
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
   width: 100%;
+  line-height: 1.4;
 }
 
 li, a, button {
@@ -13,7 +14,48 @@ li, a, button {
 }
 
 h1 {
-  
+  font-family: "Space Mono";
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+  padding-bottom: .7rem;
+}
+
+.heading-deco {
+  font-family: "Space Mono";
+  font-size: 2.5rem;
+  font-weight:bolder;
+  margin-bottom:4rem;
+  display: flex;
+  border: solid red 1px;
+}
+
+.heading-deco h2 {
+  color: #172530;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    #79B2C6 50%
+  );
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-deco {
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+  }
+
+  .heading-deco h2 {
+    justify-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 /* HEADER */
@@ -107,6 +149,120 @@ header nav img {
 
 /* LANDING PAGE */
 #landing {
+  max-width: 1280px;
+  /*border: solid red 1px;*/
+  /*below are copied from my al-waha page*/
+  color:#d05454;
+  width: 70%;
+  padding: 5rem 15%;
+  justify-content: center;
+  margin: 0 auto;
+  /*grid thingy*/
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.about-me-title {
+  /*border: solid red 1px;*/
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+.about-me {
+  /*border: solid red 1px;*/
+  grid-area: 2 / 1 / 4 / 5;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+.profile-pic {
+  /*border: solid red 1px;*/
+  grid-area: 1 / 5 / 4 / 8;
+  align-content: center;
   display: flex;
-  height: 600px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.pfp-contain { /*anti-stretch thingy*/
+  max-height: 20rem; 
+  display: inline-block;
+  /*border: solid green 1px;*/
+  vertical-align: middle;
+}
+
+#landing img {
+  max-height: 20rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 20%;
+  
+}
+
+#landing p {
+  color: rgb(9,54,60)
+}
+
+@media only screen and (min-width: 768px) { /* desktop only */
+  .about-me {
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #landing {
+    width: 80%;
+    padding: 3rem 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-bottom: 5rem;
+  }
+    
+  .about-me-title { 
+    grid-area: 1 / 1 / 2 / 3;
+    display: table;
+  }
+
+  .about-me-title-container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .about-me { 
+    grid-area: 2 / 1 / 4 / 4; 
+    display: table;
+    vertical-align: middle;
+  }
+
+  .about-me p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .profile-pic { 
+    grid-area: 1 / 3 / 2 / 4; 
+  }
+
+}
+
+/* PROJECTS */
+#projects {
+  max-width: 1280px;
+  /*border: solid red 1px;*/
+  /*below are copied from my al-waha page*/
+  width: 70%;
+  padding: 5rem 15%;
+  justify-content: center;
+  margin: 0 auto;
+  /*grid thingy*/
+}
+
+.project {
+  display: solid red 1px;
 }
